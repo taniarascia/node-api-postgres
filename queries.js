@@ -1,6 +1,6 @@
 import { Pool } from 'pg'
 const pool = new Pool({
-  user: 'jon',
+  user: 'me',
   host: 'localhost',
   database: 'api',
   password: 'password',
