@@ -1,4 +1,4 @@
-import { Pool } from 'pg'
+const Pool = require('pg').Pool
 const pool = new Pool({
   user: 'me',
   host: 'localhost',
