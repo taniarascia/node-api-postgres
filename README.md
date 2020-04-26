@@ -45,13 +45,18 @@ node index.js
 
 ## Commands
 
+- GET: `curl http://localhost:3000/settings/locale`
+- PUT: `curl -X PUT -d "val=Georgia"  http://localhost:3000/settings/locale`
+
+
 - GET: `curl http://localhost:3000/users`
 - POST: `curl --data "name=Jerry&email=jerry@example.com" http://localhost:3000/users`
 - PUT: `curl -X PUT -d "name=George" -d "email=george@example.com" http://localhost:3000/users/1`
 - DELETE: `curl -X "DELETE" http://localhost:3000/users/1`
 
-## Author
-
+## Original Repository
+  
+Credit goes to:   
 - [Tania Rascia](https://www.taniarascia.com)
 
 ## License
