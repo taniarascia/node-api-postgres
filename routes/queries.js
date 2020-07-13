@@ -1,12 +1,4 @@
-const Pool = require('pg').Pool
-const pool = new Pool({
-  user: 'me',
-  host: 'localhost',
-  database: 'api',
-  password: 'password',
-  port: 5432,
-})
-
+let pool = require('../config/db');
 const getUsers = (request, response) => {
   pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {
     if (error) {
@@ -34,7 +26,7 @@ const createUser = (request, response) => {
     if (error) {
       throw error
     } else if (!Array.isArray(results.rows) || results.rows.length < 1) {
-    	throw error
+      throw error
     }
     response.status(201).send(`User added with ID: ${results.rows[0].id}`)
   })
@@ -50,15 +42,15 @@ const updateUser = (request, response) => {
     (error, results) => {
       if (error) {
         throw error
-      } 
-      if (typeof results.rows == 'undefined') {
-      	response.status(404).send(`Resource not found`);
-      } else if (Array.isArray(results.rows) && results.rows.length < 1) {
-      	response.status(404).send(`User not found`);
-      } else {
-  	 	  response.status(200).send(`User modified with ID: ${results.rows[0].id}`)         	
       }
-      
+      if (typeof results.rows == 'undefined') {
+        response.status(404).send(`Resource not found`);
+      } else if (Array.isArray(results.rows) && results.rows.length < 1) {
+        response.status(404).send(`User not found`);
+      } else {
+        response.status(200).send(`User modified with ID: ${results.rows[0].id}`)
+      }
+
     }
   )
 }
