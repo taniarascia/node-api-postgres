@@ -16,7 +16,7 @@ module.exports = (function () {
       return this.argsList[this.argsList.indexOf("-U") + 1]
     }
 
-    return 'api'; 
+    return 'me'; 
   };
 
   /**
