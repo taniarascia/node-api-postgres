@@ -48,7 +48,7 @@ node index.js
 ## Usage
 
 ```bash
-node index.js -U 'my_pg_user' -p 'my_pg_password'
+node index.js -U 'me' -p 'password'
 ```
 
 
