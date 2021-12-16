@@ -12,6 +12,7 @@ brew services start postgresql
 psql postgres
 ```
 
+
 ```sql
 CREATE ROLE me WITH LOGIN PASSWORD 'password';
 ALTER ROLE me CREATEDB;
@@ -44,6 +45,13 @@ cd node-api-postgres
 npm install
 node index.js
 ```
+## Usage
+
+```bash
+node index.js -U 'my_pg_user' -p 'my_pg_password'
+```
+
+
 
 ## Commands
 
