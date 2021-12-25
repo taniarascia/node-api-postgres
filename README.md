@@ -37,7 +37,7 @@ INSERT INTO users (name, email)
 
 ## Installation
 
-> Don't forget to edit `pg_hba.conf` in order to allow server connectiosn to postgres if on the same machine!
+> Don't forget to edit `pg_hba.conf` in order to allow server connections to postgres if on the same machine!
 
 ```bash
 git clone git@github.com:lingqingmeng/node-api-postgres
