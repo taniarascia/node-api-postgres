@@ -46,7 +46,7 @@ Applications are ran with group `wheel` in Mac. Applications and Users in that g
 > Don't forget to edit `pg_hba.conf` in order to allow server connections to postgres if on the same machine!
 
 ```bash
-git clone git@github.com:lingqingmeng/node-api-postgres
+git clone git@github.com:taniarascia/node-api-postgres
 cd node-api-postgres
 npm install
 node index.js
