@@ -32,10 +32,16 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (name, email)
-  VALUES ('Alice', 'alice@ondecentral.com'), ('Bob', 'bob@ondecentral.com');
+  VALUES ('Jerry', 'jerry@example.com'), ('George', 'george@example.com');
 ```
 
-## Installation
+## Installation for Mac
+
+> Currently tested with [Postgres.app](https://postgresapp.com/downloads.html)
+
+Applications are ran with group `wheel` in Mac. Applications and Users in that group have elevated `su` permissions.
+
+## Installation for Windows
 
 > Don't forget to edit `pg_hba.conf` in order to allow server connections to postgres if on the same machine!
 
@@ -45,6 +51,7 @@ cd node-api-postgres
 npm install
 node index.js
 ```
+
 ## Usage
 
 ```bash
@@ -53,22 +60,21 @@ node index.js -U 'me' -p 'password'
 
 
 
+
+
+
 ## Commands
 
-- GET: `curl http://localhost:3000/settings/locale`
-- PUT: `curl -X PUT -d "val=Georgia"  http://localhost:3000/settings/locale`
-
-
 - GET: `curl http://localhost:3000/users`
-- POST: `curl --data "name=Alice&email=alice@ondecentral.com" http://localhost:3000/users`
-- PUT: `curl -X PUT -d "name=Bob" -d "email=bob@ondecentral.com" http://localhost:3000/users/1`
+- POST: `curl --data "name=Jerry&email=jerry@example.com" http://localhost:3000/users`
+- PUT: `curl -X PUT -d "name=George" -d "email=george@example.com" http://localhost:3000/users/1`
 - DELETE: `curl -X "DELETE" http://localhost:3000/users/1`
 
-## Original Repository
-  
-Credit goes to:   
+## Author
+
 - [Tania Rascia](https://www.taniarascia.com)
 
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
+
