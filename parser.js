@@ -9,7 +9,7 @@ module.exports = (function () {
 
   /**
    * @description If cli has hyphen for -U return the element ahead of it
-   * @return {number} Default user is postgres
+   * @return {number} Default user is me
    */
   Parser.prototype.getPgUser = function (credentials) {
     if (this.argsList.indexOf("-U") !== -1) {
