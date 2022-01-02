@@ -8,7 +8,7 @@ module.exports = (function () {
   }
 
   /**
-   * @description If cli has hyphen for -U return the element ahead of it
+   * @description If cli detects hyphen for -U return the element ahead of it
    * @return {number} Default user is me
    */
   Parser.prototype.getPgUser = function (credentials) {
@@ -20,7 +20,7 @@ module.exports = (function () {
   };
 
   /**
-   * @description If cli has hyphen for -p retrieve password
+   * @description If cli detects hyphen for -p retrieve password in the element ahead
    * @return {number} Default pw is password
    */
   Parser.prototype.getPgPassword = function (credentials) {
