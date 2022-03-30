@@ -12,6 +12,7 @@ brew services start postgresql
 psql postgres
 ```
 
+
 ```sql
 CREATE ROLE me WITH LOGIN PASSWORD 'password';
 ALTER ROLE me CREATEDB;
@@ -34,7 +35,15 @@ INSERT INTO users (name, email)
   VALUES ('Jerry', 'jerry@example.com'), ('George', 'george@example.com');
 ```
 
-## Installation
+## Installation for Mac
+
+> Currently tested with [Postgres.app](https://postgresapp.com/downloads.html)
+
+Applications are ran with group `wheel` in Mac. Applications and Users in that group have elevated `su` permissions.
+
+## Installation for Windows
+
+> Don't forget to edit `pg_hba.conf` in order to allow server connections to postgres if on the same machine!
 
 ```bash
 git clone git@github.com:taniarascia/node-api-postgres
@@ -42,6 +51,17 @@ cd node-api-postgres
 npm install
 node index.js
 ```
+
+## Usage
+
+```bash
+node index.js -U 'me' -p 'password'
+```
+
+
+
+
+
 
 ## Commands
 
@@ -57,3 +77,4 @@ node index.js
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
+
